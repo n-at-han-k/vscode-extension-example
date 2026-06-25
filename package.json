@@ -9,7 +9,7 @@
   "type": "module",
   "main": "./out/extension.js",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.96.0"
   },
   "categories": [
     "Other"
@@ -52,7 +52,7 @@
     "@types/node": "^24.2.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@types/vscode": "^1.125.0",
+    "@types/vscode": "^1.96.0",
     "@vitejs/plugin-react": "^6.0.3",
     "@vscode/vsce": "^3.6.0",
     "eslint": "^10.5.0",
