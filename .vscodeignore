@@ -1,0 +1,17 @@
+# Everything the published extension needs lives in dist/ (webview bundle +
+# codicons) and out/ (compiled extension host). Exclude the rest.
+.vscode/**
+.vscode-test/**
+.github/**
+node_modules/**
+src/**
+public/**
+**/tsconfig*.json
+eslint.config.mjs
+vite.config.ts
+.gitignore
+.vscodeignore
+package-lock.json
+**/*.map
+**/*.ts
+**/*.tsbuildinfo

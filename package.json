@@ -1,0 +1,66 @@
+{
+  "name": "vscode-extension-example",
+  "displayName": "Data Table Example",
+  "description": "Sample VS Code extension rendering a data table with VS Code Elements in a React webview.",
+  "publisher": "your-publisher-name",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "./out/extension.js",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-name/vscode-extension-example.git"
+  },
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "tableWebview.show",
+        "title": "Show Data Table",
+        "category": "Table Webview"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "npm run build:webview && npm run build:extension",
+    "build:webview": "vite build",
+    "build:extension": "tsc -p tsconfig.extension.json",
+    "check": "tsc -b",
+    "dev": "vite build --watch",
+    "watch:extension": "tsc -p tsconfig.extension.json --watch",
+    "lint": "eslint .",
+    "package": "vsce package",
+    "link-deps": "npm link @vscode-elements/elements"
+  },
+  "dependencies": {
+    "@vscode-elements/elements": "^2.5.1",
+    "@vscode/codicons": "^0.0.45",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/vscode": "^1.125.0",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vscode/vsce": "^3.6.0",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.62.0",
+    "vite": "^8.1.0"
+  }
+}

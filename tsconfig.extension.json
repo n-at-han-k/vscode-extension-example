@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.extension.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "out",
+    "rootDir": "src",
+    "sourceMap": true,
+    "skipLibCheck": true,
+
+    /* The extension host has no DOM and no third-party types of its own. */
+    "types": [],
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/extension.ts", "src/data.ts"]
+}
