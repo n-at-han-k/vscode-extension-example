@@ -82,16 +82,22 @@ npm run build      # build webview + compile extension host
 Press **F5** (the *Run Extension* launch config) to build and open an Extension
 Development Host. Then run **Show Data Table** from the Command Palette.
 
-For an iterative loop, run the webview watcher and the extension watcher in
-separate terminals:
+For an iterative loop, run the watcher (rebuilds both the webview bundle and the
+extension host on save), then reload the Extension Development Host window with
+`Ctrl+R` after changes:
 
 ```bash
-npm run dev              # vite build --watch (webview)
-npm run watch:extension  # tsc --watch (extension host)
+npm run dev
 ```
 
-Other scripts: `npm run check` (typecheck everything), `npm run lint`,
-`npm run package` (build a `.vsix`).
+Scripts:
+
+- `npm run dev` — watch + rebuild both halves
+- `npm run build` — one-shot build
+- `npm run package` — build a `.vsix` (via vsce)
+
+(`vscode:prepublish` is a lifecycle hook vsce runs automatically when
+packaging/publishing.)
 
 ## Publish
 

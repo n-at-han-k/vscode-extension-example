@@ -29,16 +29,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run build",
-    "build": "npm run build:webview && npm run build:extension",
-    "build:webview": "vite build",
-    "build:extension": "tsc -p tsconfig.extension.json",
-    "check": "tsc -b",
-    "dev": "vite build --watch",
-    "watch:extension": "tsc -p tsconfig.extension.json --watch",
-    "lint": "eslint .",
+    "dev": "concurrently \"vite build --watch\" \"tsc -p tsconfig.extension.json --watch\"",
+    "build": "vite build && tsc -p tsconfig.extension.json",
     "package": "vsce package",
-    "link-deps": "npm link @vscode-elements/elements"
+    "vscode:prepublish": "npm run build"
   },
   "dependencies": {
     "@vscode-elements/elements": "^2.5.1",
@@ -55,6 +49,7 @@
     "@types/vscode": "^1.96.0",
     "@vitejs/plugin-react": "^6.0.3",
     "@vscode/vsce": "^3.6.0",
+    "concurrently": "^9.1.0",
     "eslint": "^10.5.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",

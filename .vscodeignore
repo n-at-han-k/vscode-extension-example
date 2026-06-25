@@ -15,3 +15,6 @@ package-lock.json
 **/*.map
 **/*.ts
 **/*.tsbuildinfo
+**/*.swp
+**/*.swo
+**/*.vsix
